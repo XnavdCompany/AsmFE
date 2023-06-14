@@ -1,0 +1,40 @@
+<div class="w-[980px] mx-auto my-10">
+  <div class="bg-gray-200 p-4">
+    <div class="flex items-center mb-4 px-3 py-2">
+      <div>
+        <h2 class="text-lg font-bold mx-3">Ảnh</h2>
+      </div>
+      <div>
+        <h2 class="text-lg font-bold ml-[150px]">Tên sản phẩm</h2>
+      </div>
+      <div>
+        <h2 class="text-lg font-bold ml-[135px]">Giá</h2>
+      </div>
+      <div>
+        <h2 class="text-lg font-bold ml-[150px]">Số lượng</h2>
+      </div>
+      <div>
+         
+      </div>
+    </div>
+  </div>
+  <div *ngFor="let item of cartItems">
+    <div class="bg-gray-100 p-4">
+      <div class="flex items-center mb-4 justify-between px-3 py-2">
+        <img [src]="item.img" alt="Product Image" class="w-16 h-16 mr-4">
+        <div>
+          <h2 class="text-lg font-medium">{{ item.name }}</h2>
+        </div>
+        <div>
+          <h2 class="text-gray-500 flex"> {{ item.price }} <p class="ml-1">VND</p></h2>
+        </div>
+        <div>
+          <input type="number" class="w-[50px] border-[1px] border-black rounded pl-1" value="1" min="0">
+        </div>
+        <button (click)="removeFromCart(item)"
+          class="py-2 px-4 bg-red-600 text-white font-semibold rounded-lg shadow-md hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-400 focus:ring-opacity-75">Remove</button>
+      </div>
+
+    </div>
+  </div>
+</div>

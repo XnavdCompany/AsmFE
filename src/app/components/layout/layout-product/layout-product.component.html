@@ -1,0 +1,123 @@
+<div>
+  <img
+    class="w-full h-[300px]"
+    src="https://pkmacbook.com/wp-content/uploads/2021/06/banner-xanh-trang-tri_060829012_thumb.jpg"
+    alt=""
+  />
+  <div class="relative top-[-200px]">
+    <div class="text-5xl font-semibold flex justify-center mb-3">Product</div>
+    <div class="flex justify-center">
+      <p class="hover:text-red-700"><a routerLink="/">Home</a></p>
+      <span class="mx-2">/</span>
+      <p>Product</p>
+    </div>
+  </div>
+</div>
+<div class="flex justify-between w-[1150px] mx-auto">
+  <!-- menu -->
+  <div class="w-[220px]">
+    <div class="mt-4">
+      <h3 class="text-xl font-semibold mb-3">FILTER BY PRICE</h3>
+      <ul>
+        <li class="text-sm font-normal my-2 py-2">
+          <a href="" class="hover:text-red-400 delay-200"
+            >10.000 VND ~ 100.000 VND</a
+          >
+        </li>
+        <li class="text-sm font-normal my-2 py-2">
+          <a href="" class="hover:text-red-400 delay-200"
+            >100.000 VND ~ 300.000 VND</a
+          >
+        </li>
+        <li class="text-sm font-normal my-2 py-2">
+          <a href="" class="hover:text-red-400 delay-200"
+            >300.000 VND ~ 500.000 VND</a
+          >
+        </li>
+        <li class="text-sm font-normal my-2 py-2">
+          <a href="" class="hover:text-red-400 delay-200"
+            >500.000 VND ~ 1000.000 VND</a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <div class="mt-10">
+      <h3 class="text-xl font-semibold mb-3">Product Categories</h3>
+      <ul>
+        <li
+          *ngFor="let brand of brands"
+          class="text-base font-normal my-2 py-2 border-b-[1px]"
+        >
+          <a
+            [routerLink]="['/category', brand._id]"
+            class="hover:text-red-400 delay-200"
+            >{{ brand.name }}</a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <div class="mt-10">
+      <h3 class="text-xl font-semibold mb-3">Tag</h3>
+      <ul class="">
+        <li>
+          <a
+            href=""
+            class="font-normal border-[1px] text-sm py-1 px-2 hover:text-white hover:bg-red-300 float-left mr-4 mb-1"
+            >Tag 1</a
+          >
+        </li>
+        <li>
+          <a
+            href=""
+            class="font-normal border-[1px] text-sm py-1 px-2 hover:text-white hover:bg-red-300 float-left mr-4 mb-1"
+            >Tag 2</a
+          >
+        </li>
+        <li>
+          <a
+            href=""
+            class="font-normal border-[1px] text-sm py-1 px-2 hover:text-white hover:bg-red-300 float-left mr-4 mb-1"
+            >Tag 3</a
+          >
+        </li>
+        <li>
+          <a
+            href=""
+            class="font-normal border-[1px] text-sm py-1 px-2 hover:text-white hover:bg-red-300 float-left mr-4 mb-1"
+            >Tag 4</a
+          >
+        </li>
+        <li>
+          <a
+            href=""
+            class="font-normal border-[1px] text-sm py-1 px-2 hover:text-white hover:bg-red-300 float-left mr-4 mb-1"
+            >Taggggg 5</a
+          >
+        </li>
+        <li>
+          <a
+            href=""
+            class="font-normal border-[1px] text-sm py-1 px-2 hover:text-white hover:bg-red-300 float-left mr-4 mb-1"
+            >Tag 6</a
+          >
+        </li>
+        <li>
+          <a
+            href=""
+            class="font-normal border-[1px] text-sm py-1 px-2 hover:text-white hover:bg-red-300 float-left mr-4 mb-1"
+            >Tag 7</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Products -->
+  <div class="w-[900px]">
+    <app-product-page />
+    
+  </div>
+</div>
+<div class="h-[200px]"></div>

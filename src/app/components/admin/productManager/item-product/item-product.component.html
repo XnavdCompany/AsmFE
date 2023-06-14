@@ -1,0 +1,31 @@
+<th
+  scope="row"
+  class="w-2 px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-black"
+  >
+  {{ index + 1 }}
+</th>
+<td class="px-6 py-4">
+  <img src="{{ product.img }}" class="w-[30px] h-[30px]" />
+</td>
+<td class="px-6 py-4">{{ product.name }}</td>
+<td class="px-6 py-4">{{ product.price }}</td>
+<td class="px-6 py-4 w-[500px]">{{ product.desc }}</td>
+<td class="px-6 py-4">{{ product.brandId }}</td>
+<td>
+  <button
+    (click)="removeProduct(product._id)"
+    class="py-2 px-4 bg-red-600 text-white font-semibold rounded-lg shadow-md hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-400 focus:ring-opacity-75"
+  >
+    Xóa
+  </button>
+  <span> - </span>
+  <button
+    class="py-2 px-4 bg-green-400 text-white font-semibold rounded-lg shadow-md hover:bg-green-500 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75"
+  >
+    <a
+      [routerLink]="[product._id, 'edit']"
+      class="font-medium text-white btn btn-primary"
+      >Sửa</a
+    >
+  </button>
+</td>

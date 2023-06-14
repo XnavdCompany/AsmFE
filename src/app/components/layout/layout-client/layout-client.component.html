@@ -1,0 +1,166 @@
+<!-- component -->
+<!-- follow me on twitter @asad_codes -->
+
+<section class="relative mx-auto">
+  <!-- navbar -->
+  <nav class="flex justify-between bg-gray-900 text-white w-screen">
+    <div class="px-5 xl:px-12 py-6 flex w-full items-center">
+      <a class="text-3xl font-bold font-heading" routerLink="">
+        <!-- <img class="h-9" src="logo.png" alt="logo"> -->
+        Logo
+      </a>
+      <!-- Nav Links -->
+      <ul
+        class="hidden md:flex px-4 mx-auto font-semibold font-heading space-x-12"
+      >
+        <li><a class="hover:text-gray-200" routerLink="">Trang chủ</a></li>
+        <li>
+          <a class="hover:text-gray-200" routerLink="brand">Thương hiệu</a>
+        </li>
+        <li>
+          <a class="hover:text-gray-200" routerLink="product">Sản phẩm</a>
+        </li>
+      </ul>
+      <!-- Header Icons cart -->
+      <div class="hidden xl:flex items-center space-x-5">
+        <a class="flex items-center hover:text-gray-200" routerLink="cart">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+            />
+          </svg>
+          <span class="flex absolute -mt-5 ml-4">
+            <span
+              class="animate-ping absolute inline-flex h-3 w-3 rounded-full bg-pink-400 opacity-75"
+            ></span>
+            <span class="relative inline-flex rounded-full h-3 w-3 bg-pink-500">
+            </span>
+          </span>
+        </a>
+        <!-- Sign In / Register      -->
+        <div class="relative inline-block text-left dropdown">
+          <!--  -->
+          <div class="inline-block">
+            <a
+              class="flex items-center hover:text-gray-200"
+              routerLink="#"
+              aria-haspopup="true"
+              aria-expanded="true"
+              aria-controls="headlessui-menu-items-117"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6 hover:text-gray-200"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
+              </svg>
+            </a>
+          </div>
+          <!--  -->
+
+          <div
+            class="opacity-0 invisible dropdown-menu transition-all duration-300 transform origin-top-right -translate-y-2 scale-95"
+          >
+            <div
+              class="absolute right-0 w-56 mt-2 origin-top-right bg-white border border-gray-200 rounded-md shadow-lg outline-none"
+              aria-labelledby="headlessui-menu-button-1"
+              id="headlessui-menu-items-117"
+              role="menu"
+            >
+              <!-- nếu chưa đăng nhập, chỉ hiển thị sign up, sign in -->
+
+              <div *ngIf="!userEmail">
+                <div class="py-1">
+                  <a
+                    routerLink="signin"
+                    tabindex="0"
+                    class="text-gray-700 flex justify-between w-full px-4 py-2 text-sm leading-5 text-left border-b-2"
+                    role="menuitem"
+                    >Đăng nhập</a
+                  >
+                </div>
+                <div class="py-1">
+                  <a
+                    routerLink="signup"
+                    tabindex="3"
+                    class="text-gray-700 flex justify-between w-full px-4 py-2 text-sm leading-5 text-left border-b-2"
+                    role="menuitem"
+                    >Đăng ký</a
+                  >
+                </div>
+              </div>
+
+              <div *ngIf="userEmail">
+                <!--nếu đăng nhập rồi thì show cái này  -->
+                <div class="px-4 py-3 border-b-2">
+                  <p class="text-sm leading-5 text-black">Đăng nhập bằng</p>
+                  <p
+                    class="text-sm font-medium leading-5 text-gray-900 truncate"
+                  >
+                    {{ userEmail }}
+                  </p>
+                </div>
+                <!-- nếu rolo = 0  => hiển thị nút này-->
+                <div class="py-1" *ngIf="userRole === 'admin'">
+                  <a
+                    routerLink="admin"
+                    tabindex="3"
+                    class="text-gray-700 flex justify-between w-full px-4 py-2 text-sm leading-5 text-left border-b-2"
+                    role="menuitem"
+                    >Vào trang quản trị</a
+                  >
+                </div>
+                <div class="py-1">
+                  <button (click)="logout()">
+                    <a
+                      routerLink=""
+                      tabindex="3"
+                      class="text-gray-700 flex justify-between w-full px-4 py-2 text-sm leading-5 text-left"
+                      role="menuitem"
+                      >Đăng xuất</a
+                    >
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</section>
+
+<hr />
+
+<div>
+  <router-outlet />
+</div>
+
+<footer class="w-full">
+  <app-footer />
+</footer>
+
+<style>
+  .dropdown:focus-within .dropdown-menu {
+    opacity: 1;
+    transform: translate(0) scale(1);
+    visibility: visible;
+  }
+</style>

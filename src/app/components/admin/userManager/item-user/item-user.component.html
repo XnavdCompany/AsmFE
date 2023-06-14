@@ -1,0 +1,21 @@
+<th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-black">
+  {{ index + 1 }}
+</th>
+<td class="px-6 py-4">{{ user.username }}</td>
+<td class="px-6 py-4">{{ user.email }}</td>
+
+<td class="px-6 py-4">
+  {{ user.role === 'admin' ? "Admin" : "Khách hàng" }}
+</td>
+
+<td class="px-6 py-4" *ngIf="user.role !== 'admin'">
+  <button (click)="removeUser(user.id)"
+    class="py-2 px-4 bg-red-600 text-white font-semibold rounded-lg shadow-md hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-400 focus:ring-opacity-75">
+    Delete
+  </button>
+  <span> - </span>
+  <button
+    class="py-2 px-4 bg-green-400 text-white font-semibold rounded-lg shadow-md hover:bg-green-500 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75">
+    <a [routerLink]="[user._id, 'edit']" class="font-medium text-white btn btn-primary">Sửa</a>
+  </button>
+</td>

@@ -1,0 +1,117 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "img": "https://picsum.photos/200/300",
+      "name": "San Pham C",
+      "price": 300000,
+      "desc": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus tempore non distinctio quod vel nihil dicta omnis. Pariatur vero similique quas dignissimos, tenetur dolores consequatur enim voluptatem sit deleniti natus.",
+      "brand": "Brand 1"
+    },
+    {
+      "id": 2,
+      "img": "https://picsum.photos/200/300",
+      "name": "San Pham C",
+      "price": 300,
+      "desc": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus tempore non distinctio quod vel nihil dicta omnis. Pariatur vero similique quas dignissimos, tenetur dolores consequatur enim voluptatem sit deleniti natus.",
+      "brand": "Brand 2"
+    },
+    {
+      "id": 3,
+      "img": "https://picsum.photos/200/300",
+      "name": "San Pham C",
+      "price": 300,
+      "desc": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus tempore non distinctio quod vel nihil dicta omnis. Pariatur vero similique quas dignissimos, tenetur dolores consequatur enim voluptatem sit deleniti natus.",
+      "brand": "Brand 6"
+    },
+    {
+      "id": 4,
+      "img": "https://picsum.photos/200/300",
+      "name": "San Pham C",
+      "price": 300,
+      "desc": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus tempore non distinctio quod vel nihil dicta omnis. Pariatur vero similique quas dignissimos, tenetur dolores consequatur enim voluptatem sit deleniti natus.",
+      "brand": "Brand 5"
+    },
+    {
+      "id": 5,
+      "img": "https://picsum.photos/200/300",
+      "name": "San Pham C",
+      "price": 300,
+      "desc": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus tempore non distinctio quod vel nihil dicta omnis. Pariatur vero similique quas dignissimos, tenetur dolores consequatur enim voluptatem sit deleniti natus.",
+      "brand": "Brand 8"
+    },
+    {
+      "id": 6,
+      "img": "link ảnh",
+      "name": "sản phẩm A",
+      "price": 12121212,
+      "desc": "mô tả sản phẩmmô tả sản phẩmmô tả sản phẩmmô tả sản phẩmmô tả sản phẩmmô tả sản phẩmmô tả sản phẩmmô tả sản phẩmmô tả sản phẩmmô tả sản phẩmmô tả sản phẩmmô tả sản phẩmmô tả sản phẩmmô tả sản phẩmmô tả sản phẩmmô tả sản phẩm",
+      "brand": "Brand 6"
+    }
+  ],
+  "brands": [
+    {
+      "id": 1,
+      "name": "Brand 1 ắp đết"
+    },
+    {
+      "id": 2,
+      "name": "Brand 2"
+    },
+    {
+      "id": 3,
+      "name": "Brand 3"
+    },
+    {
+      "id": 4,
+      "name": "Brand 4"
+    },
+    {
+      "id": 5,
+      "name": "Brand 5"
+    },
+    {
+      "id": 6,
+      "name": "Brand 6"
+    },
+    {
+      "id": 7,
+      "name": "Brand 7"
+    },
+    {
+      "id": 8,
+      "name": "Brand 8"
+    },
+    {
+      "name": "Nike",
+      "id": 9
+    },
+    {
+      "name": "brand night new",
+      "id": 10
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "username": "admin",
+      "email": "admin@gmail.com",
+      "password": "admin",
+      "role": 0
+    },
+    {
+      "id": 2,
+      "username": "Duong Xuan Van",
+      "email": "xuanvan01@gmail.com",
+      "password": 123456,
+      "role": 1
+    },
+    {
+      "id": 4,
+      "name": "",
+      "email": "xuanvan01@gmail.com",
+      "password": 123456,
+      "role": 1
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+<div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+    <div class="p-3">
+        <a routerLink="add">
+            <button
+                class="py-2 px-4 bg-gray-600 text-white font-semibold rounded-lg hover:bg-gray-700 shadow-mdfocus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75">
+                Add brand
+            </button>
+        </a>
+    </div>
+    <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+            <tr>
+                <th scope="col" class="px-6 py-3">
+                    #
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Brand name
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    <span class="sr-only">Edit</span>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
+                app-item-brand *ngFor="let brand of brands; let i = index" [brand]="brand" [index]="i">
+            </tr>
+        </tbody>
+    </table>
+</div>

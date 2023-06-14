@@ -1,0 +1,78 @@
+<div class="w-full">
+  <app-banner />
+</div>
+
+<div class="w-[1200px] mx-auto">
+  <h1 class="flex justify-center text-3xl font-bold mb-4">Top Categories</h1>
+  <div class="flex justify-between">
+    <div class="w-[200px] border-r-[1px] border-gray-150">
+      <a href=""><img class="w-[180px] h-[120px] relative top-[10px] left-[10px] hv-img-branch"
+          src="https://upload.wikimedia.org/wikipedia/commons/e/eb/Converse_shoe_company_logo.png" alt="">
+      </a>
+    </div>
+    <div class="w-[200px] border-r-[1px] border-gray-150">
+      <a href=""><img class="w-[180px] h-[85px] relative left-[10px] top-[30px] hv-img-branch"
+          src="https://www.edigitalagency.com.au/wp-content/uploads/nike-logo-png-black-icon-white-background-large.png"
+          alt="">
+      </a>
+    </div>
+    <div class="w-[200px] border-r-[1px] border-gray-150">
+      <a href=""><img class="w-[190px] relative left-[10px] hv-img-branch"
+          src="https://cdn.freebiesupply.com/logos/large/2x/adidas-logo.png" alt="">
+      </a>
+    </div>
+    <div class="w-[200px] border-r-[1px] border-gray-150 hv-img-branch">
+      <a href=""><img class="w-[180px] h-[95px] relative left-[10px] top-[20px]"
+          src="https://www.freepnglogos.com/uploads/puma-logo-png-1.png" alt="">
+      </a>
+    </div>
+    <div class="w-[200px] border-r-[1px] border-gray-150 hv-img-branch">
+      <a href=""><img class="w-[180px] h-[75px] relative left-[10px] top-[35px]"
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Fila_logo.svg/640px-Fila_logo.svg.png" alt="">
+      </a>
+    </div>
+    <div class="w-[200px]">
+      <a href=""><img class="w-[180px] h-[75px] relative left-[10px] top-[35px] hv-img-branch"
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Vans-logo.svg/2560px-Vans-logo.svg.png" alt="">
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="w-[980px] mx-auto">
+  <div class="">
+    <h1 class="flex justify-center text-3xl font-bold mb-4 mt-8">Đang giảm giá </h1>
+    <div class="grid grid-cols-4 gap-4">
+      <div *ngFor="let product of products" class="mt-4 w-[260px] ">
+        <p><a routerLink="/product/{{product._id}}"><img [src]="product.img" alt=""
+              class="w-[230px] h-[230px] hv-img-pro"></a></p>
+        <p class="text-lg mt-5 font-medium hover:text-red-500">{{product.name}}</p>
+        <p>{{product.price}} VND</p>
+      </div>
+    </div>
+
+    <div class="h-[50px]"></div>
+  </div>
+</div>
+<div>
+  <img class="w-full h-[300px]"
+    src="https://pkmacbook.com/wp-content/uploads/2021/06/banner-xanh-trang-tri_060829012_thumb.jpg" alt="">
+</div>
+<div class="w-[980px] mx-auto ">
+  <div class="">
+    <h1 class="flex justify-center text-3xl font-bold mb-4 mt-8">Sản phẩm nổi bật</h1>
+
+
+    <div class="grid grid-cols-4 gap-4">
+      <div *ngFor="let product of products" class="mt-4 w-[260px] ">
+        <p><a routerLink="/product/{{product._id}}"><img [src]="product.img" alt=""
+              class="w-[230px] h-[230px] hv-img-pro"></a></p>
+        <p class="text-lg mt-5 font-medium hover:text-red-500">{{product.name}}</p>
+        <p>{{product.price}} VND</p>
+      </div>
+    </div>
+
+
+    <div class="h-[200px]"></div>
+  </div>
+</div>

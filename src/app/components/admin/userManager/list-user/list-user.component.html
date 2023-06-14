@@ -1,0 +1,24 @@
+<div class="">
+    <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+      <thead class="text-xs text-gray-700 uppercase bg-gray-200">
+        <tr>
+          <th scope="col" class="px-6 py-3">#</th>
+          <th scope="col" class="px-6 py-3">Tên</th>
+          <th scope="col" class="px-6 py-3">Email</th>
+          <th scope="col" class="px-6 py-3">Role</th>
+          <th scope="col" class="px-6 py-3">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+          app-item-user
+          *ngFor="let user of users; let i = index"
+          [user]="user"
+          [index]="i"
+          (onRemove)="removeUser(user._id)"
+          class="border-b-2"
+        ></tr>
+      </tbody>
+    </table>
+  </div>
+  

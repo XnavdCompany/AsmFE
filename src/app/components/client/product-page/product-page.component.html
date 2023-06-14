@@ -1,0 +1,7 @@
+<div class="grid grid-cols-3 gap-3">
+    <div *ngFor="let product of products" class="mt-4 w-[260px] ">
+        <p><a routerLink="/product/{{product._id}}"><img [src]="product.img" alt="" class="w-[260px] h-[260px]"></a></p>
+        <p class="text-lg mt-5 font-medium hover:text-red-500">{{product.name}}</p>
+        <p>{{product.price}} VND</p>
+    </div>
+</div>
